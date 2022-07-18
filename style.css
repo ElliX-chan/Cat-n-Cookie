@@ -1,0 +1,62 @@
+*{
+    padding: 0;     /*padding is the space between content and border*/
+    margin: 0;
+    overflow-x: hidden;   /*hidden makes sure that you can't scroll*/
+}
+
+/* Set a background color to the 'body' element */
+body {
+    background-color: #D2B48C; /*color: light-beige brown, codes found under: https://www.w3schools.com/cssref/css_colors.asp*/
+    }
+
+/*game surface*/
+.game{
+    width: 1000px;
+    height: 400px;
+    border: 2px solid black;
+    /*up, right, down, left*, important to keep that order!*/
+    margin: 20px 50px 20px 50px;
+    background-color: #FFF5EE; /*color: shell-white*/
+}
+
+/*hashtag is id, to find cookie from html*/
+/*cookie is player/character*/
+#cookie{
+    background-color: brown;
+    width: 40px;
+    height: 40px;
+    position: relative; /*relative so they can move*/
+    top: 360px;
+/*box is 400 px high, cookie is is 40px high = 360px to put cookie at bottom.*/
+}
+
+/*animation for jump*/
+.animate{
+    animation: jump 0.3s linear;
+}
+
+/*will make jump up, hold a bit at 200px and then slide back down at 360px*/
+@keyframes jump{
+    0%{top: 360px;}
+    30%{top: 200px;}
+    70%{top: 200px;}
+    100%{top: 360px;}
+}
+
+/*block is obstacle*/
+#block{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 360px;
+    left: 1000px; /*1000px distance so
+/*box is 400px high, cookie is is 40px high = 360px to put cookie at bottom.*/
+    animation: block 1s infinite linear;
+    }
+
+/*how block moves, from left to right*/
+@keyframes block{
+    0%{left: 1000px}
+    100%{left: -80px}  /*- means to the left*/
+}
