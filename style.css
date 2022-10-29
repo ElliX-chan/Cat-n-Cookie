@@ -19,6 +19,10 @@ body {
     background-color: #FFF5EE; /*color: shell-white*/
 }
 
+.white-text {
+    color: white;
+}
+
 /*hashtag is id, to find cookie from html*/
 /*cookie is player/character*/
 #cookie{
